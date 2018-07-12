@@ -1,6 +1,6 @@
 name:                king-fisher
 version:             0.0.0
-github:              "githubuser/king-fisher"
+git:                 "git://git.localcooking.com/tooling/king-fisher"
 license:             BSD3
 author:              "Athan Clark"
 maintainer:          "athan.clark@localcooking.com"
