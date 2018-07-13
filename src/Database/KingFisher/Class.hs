@@ -47,3 +47,7 @@ type CRUDStorable getPred getAllPred key setPred setErr deletePred deleteErr vie
 -- predicate.
 type BasicCRUDStorable key setErr deleteErr view symbol m =
   CRUDStorable key () key key setErr key deleteErr view symbol m
+
+-- | A single data view 'a' that supports CRUD, from within a predicative context.
+type ParentedCRUDStorable parentKey key setErr deleteErr view symbol m =
+  CRUDStorable (parentKey, key) parentKey key (parentKey, key) setErr (parentKey, key) deleteErr view symbol m
